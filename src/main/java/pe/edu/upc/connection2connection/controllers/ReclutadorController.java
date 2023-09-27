@@ -41,7 +41,7 @@ public class ReclutadorController {
     }
 
     @DeleteMapping("/{id}")
-    @PreAuthorize("hasAuthority('ADMIN') or hasAuthority('RECLUTADOR')")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void delete(@PathVariable("id")Integer id){
         rS.delete(id);
     }
