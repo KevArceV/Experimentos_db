@@ -30,10 +30,16 @@ public class Estudiante {
     @JoinColumn(name = "Usuario_id")
     private Usuario usuario_Estudiante;
 
+    @ManyToOne
+    @JsonIgnore
+    @JoinColumn(name = "carrera_id")
+    private Carrera carrera;
+
+
     public Estudiante() {
     }
 
-    public Estudiante(int idEstudiante, int semestre_Estudiante, int edad_Estudiante, String genero_Estudiante, boolean practicante_Estudiante, String descripcion_Estudiante, Institucion institucion_Estudiante, Usuario usuario_Estudiante) {
+    public Estudiante(int idEstudiante, int semestre_Estudiante, int edad_Estudiante, String genero_Estudiante, boolean practicante_Estudiante, String descripcion_Estudiante, Institucion institucion_Estudiante, Usuario usuario_Estudiante, Carrera carrera) {
         this.idEstudiante = idEstudiante;
         this.semestre_Estudiante = semestre_Estudiante;
         this.edad_Estudiante = edad_Estudiante;
@@ -42,6 +48,7 @@ public class Estudiante {
         this.descripcion_Estudiante = descripcion_Estudiante;
         this.institucion_Estudiante = institucion_Estudiante;
         this.usuario_Estudiante = usuario_Estudiante;
+        this.carrera = carrera;
     }
 
     public int getIdEstudiante() {
@@ -106,5 +113,13 @@ public class Estudiante {
 
     public void setUsuario_Estudiante(Usuario usuario_Estudiante) {
         this.usuario_Estudiante = usuario_Estudiante;
+    }
+
+    public Carrera getCarrera() {
+        return carrera;
+    }
+
+    public void setCarrera(Carrera carrera) {
+        this.carrera = carrera;
     }
 }

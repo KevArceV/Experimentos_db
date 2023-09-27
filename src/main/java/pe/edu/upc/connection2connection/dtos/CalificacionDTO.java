@@ -1,24 +1,47 @@
 package pe.edu.upc.connection2connection.dtos;
 
+import pe.edu.upc.connection2connection.entities.Estudiante;
+
 public class CalificacionDTO {
 
 
     private int id;
 
-    private int idEstudiante_Calificacion;
+    private int id_estudiante;
 
-    private int calificacion_Calificacion;
+    private int estudiante_ponecalificacion;
 
-    public int getId() { return id; }
+    private int calificacion;
 
-    public void setId(int id) { this.id = id; }
+    public int getId() {
+        return id;
+    }
 
-    public int getidEstudiante_Calificacion() { return idEstudiante_Calificacion; }
+    public void setId(int id) {
+        this.id = id;
+    }
 
-    public void setidEstudiante_Calificacion(int idEstudiante_Calificacion) { this.idEstudiante_Calificacion = idEstudiante_Calificacion; }
+    public int getId_estudiante() {
+        return id_estudiante;
+    }
 
-    public int getcalificacion_Calificacion() { return calificacion_Calificacion; }
+    public void setId_estudiante(int id_estudiante) {
+        this.id_estudiante = id_estudiante;
+    }
 
-    public void setcalificacion_Calificacion(int calificacion_Calificacion) { this.calificacion_Calificacion = calificacion_Calificacion; }
+    public int getEstudiante_ponecalificacion() {
+        return estudiante_ponecalificacion;
+    }
 
+    public void setEstudiante_ponecalificacion(int estudiante_ponecalificacion) {
+        this.estudiante_ponecalificacion = estudiante_ponecalificacion;
+    }
+
+    public int getCalificacion() {
+        return calificacion;
+    }
+
+    public void setCalificacion(int calificacion) {
+        this.calificacion = calificacion;
+    }
 }

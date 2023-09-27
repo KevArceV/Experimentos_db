@@ -1,5 +1,6 @@
 package pe.edu.upc.connection2connection.dtos;
 
+import pe.edu.upc.connection2connection.entities.Carrera;
 import pe.edu.upc.connection2connection.entities.Institucion;
 import pe.edu.upc.connection2connection.entities.Usuario;
 
@@ -12,6 +13,7 @@ public class EstudianteDTO {
     private String descripcion_Estudiante;
     private Institucion institucion_Estudiante;
     private Usuario usuario_Estudiante;
+    private Carrera carrera_Estudiante;
 
     public int getIdEstudiante() {
         return idEstudiante;
@@ -75,5 +77,13 @@ public class EstudianteDTO {
 
     public void setUsuario_Estudiante(Usuario usuario_Estudiante) {
         this.usuario_Estudiante = usuario_Estudiante;
+    }
+
+    public Carrera getCarrera_Estudiante() {
+        return carrera_Estudiante;
+    }
+
+    public void setCarrera_Estudiante(Carrera carrera_Estudiante) {
+        this.carrera_Estudiante = carrera_Estudiante;
     }
 }

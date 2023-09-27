@@ -10,7 +10,7 @@ public class Puesto_TrabajoDTO {
 
     private int id;
 
-    private Requisito requisito;
+    private String requisito;
 
     private Reclutador reclutador;
 
@@ -22,11 +22,11 @@ public class Puesto_TrabajoDTO {
         this.id = id;
     }
 
-    public Requisito getRequisito() {
+    public String getRequisito() {
         return requisito;
     }
 
-    public void setRequisito(Requisito requisito) {
+    public void setRequisito(String requisito) {
         this.requisito = requisito;
     }
 

@@ -48,7 +48,6 @@ public class EstudianteController {
     }
 
     @PutMapping
-    @PreAuthorize("hasAuthority('ADMIN')")
     public void goUpdate(@RequestBody EstudianteDTO dto){
         ModelMapper m = new ModelMapper();
         Estudiante e = m.map(dto, Estudiante.class);

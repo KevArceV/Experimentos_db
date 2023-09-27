@@ -24,7 +24,6 @@ public class CarreraController {
     }
 
     @GetMapping
-    @PreAuthorize("hasAuthority('ADMIN') or hasAuthority('ESTUDIANTE')")
     public List<CarreraDTO> list(){
         return aS.list().stream().map(x->{
             ModelMapper m = new ModelMapper();

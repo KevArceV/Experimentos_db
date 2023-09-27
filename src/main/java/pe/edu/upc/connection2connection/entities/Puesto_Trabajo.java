@@ -12,10 +12,8 @@ public class Puesto_Trabajo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @ManyToOne
-    @JsonIgnore
-    @JoinColumn(name = "Requisito_id")
-    private Requisito requisito;
+    @Column(name = "requisito", length = 200, nullable = false)//largo de 60 y es obligatorio(nullable)
+    private  String requisito;
 
     @ManyToOne
     @JsonIgnore
@@ -26,7 +24,7 @@ public class Puesto_Trabajo {
 
     }
 
-    public Puesto_Trabajo(int id, Requisito requisito, Reclutador reclutador) {
+    public Puesto_Trabajo(int id, String requisito, Reclutador reclutador) {
         this.id = id;
         this.requisito = requisito;
         this.reclutador = reclutador;
@@ -40,11 +38,11 @@ public class Puesto_Trabajo {
         this.id = id;
     }
 
-    public Requisito getRequisito() {
+    public String getRequisito() {
         return requisito;
     }
 
-    public void setRequisito(Requisito requisito) {
+    public void setRequisito(String requisito) {
         this.requisito = requisito;
     }
 
